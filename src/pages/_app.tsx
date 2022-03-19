@@ -3,8 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '../styles/theme'
 import { SidebarDrawerProvider } from '../contexts/SideBarDrawerContext'
 import { makeServer } from '../services/mirage'
-import { QueryClientProvider , QueryClient} from 'react-query'
-import { ReactQueryDevtools } from 'react-query/devtools'
+import { QueryClientProvider } from 'react-query'
 import { queryClient } from '../services/queryClient'
 import Head from 'next/head'
 
@@ -24,7 +23,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       </SidebarDrawerProvider>
     </ChakraProvider>
 
-    <ReactQueryDevtools />
   </QueryClientProvider>
   )
 }
